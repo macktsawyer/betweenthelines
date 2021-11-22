@@ -17,6 +17,10 @@ const Toolbar = ({ clearClick, newColorClick, newToolClick, newThickness, undoDr
         return `${value}`; // Value needed to show active value on slider
     }
 
+    function offClick() {
+        setIsColorActive(false);
+    }
+
     return (
         <div className="toolBar">
             <ul>
@@ -90,6 +94,9 @@ const Toolbar = ({ clearClick, newColorClick, newToolClick, newThickness, undoDr
                     />
                 </div>
             </ul>
+            <div onClick={offClick} className={`cover ${isColorActive ? 'active' : 'inactive'}`}>
+
+            </div>
         </div>
     )
 }

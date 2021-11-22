@@ -1,7 +1,7 @@
 .toolBar {
     position: absolute;
     left: 36vw;
-    z-index: 1;
+    z-index: 3;
     ul {
         list-style: none;
         li {
@@ -9,6 +9,7 @@
             padding-left: 5px;
             button {
                 cursor: pointer;
+                z-index: 3;
             }
         }
         div {
@@ -40,7 +41,7 @@
                 opacity: 1;
                 visibility: visible;
                 top: 32px;
-                z-index: 3;
+                z-index: 4;
             }
         }
     }
@@ -48,4 +49,17 @@
 
 .svgIcon {
     pointer-events: none;
+}
+
+.cover.inactive {
+    display: hidden;
+}
+
+.cover.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
 }
