@@ -4,7 +4,7 @@ import { ChromePicker } from 'react-color';
 import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
 import { BsPaintBucket, BsPencil, BsXCircle } from 'react-icons/bs'
-import { IoIosUndo, IoIosRedo } from 'react-icons/io';
+import { IoIosUndo } from 'react-icons/io';
 import {THEME, LEVELS} from './Theme.js'; // Consts import from another file for cleaner code
 
 const Toolbar = ({ clearClick, newColorClick, newToolClick, newThickness, undoDraw, redoDraw }) => {
@@ -27,12 +27,7 @@ const Toolbar = ({ clearClick, newColorClick, newToolClick, newThickness, undoDr
                 <li>
                     <Button variant="contained" size="small"
                     sx={{backgroundColor: THEME.palette.primary.dark}} 
-                    onClick={undoDraw}>Undo &nbsp;<IoIosUndo className="svgIcon" /></Button>
-                </li>
-                <li>
-                    <Button variant="contained" size="small"
-                    sx={{backgroundColor: THEME.palette.primary.dark}} 
-                    onClick={redoDraw}>Redo &nbsp;<IoIosRedo className="svgIcon"/></Button>
+                    onClick={undoDraw}>Undo Last &nbsp;<IoIosUndo className="svgIcon" /></Button>
                 </li>
                 <li>
                     <Button variant="contained" size="small" 

@@ -1,74 +1,40 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Draw Between The Lines
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What Is It
+-Draw Between The Lines is a front-end React based drawing application utilizing HTML5's Canvas. Built initially for the Mintbean hackathon, this project will continue on and grow with features and improvements.
 
-## Available Scripts
+## Who Made It
+-Draw Between The Lines was made as a joint venture by [Mack Sawyer](https://github.com/macktsawyer) and [Richard Gonzalez](https://github.com/RichardGAnthology).
 
-In the project directory, you can run:
+## Tech Used
+- HTML5's Canvas, React.js, CSS/SASS MUI, React-Color, React-Icons, File-Saver
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Pencil Tool
+- The pencil tool is a default of a round tipped 6px pencil which will draw as long as the left mouse button is clicked and dragged.
+![alt text](src/images/0-Line.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Fill Tool
+- The fill tool will fill the last shape drawn. If the shape isn't closed, the fill tool will close that path. Simply select the fill tool and click on the canvas.
+![alt text](src/images/0-Fill.png)
 
-### `npm test`
+### Clear
+- The clear tool will completely clear the canvas. The undo button will recall in case of a mistake.
+![alt text](src/images/0-Clear.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Color Selector
+- The color selector is a pop-up window that will allow the user to select a new color. When ready, click off once or click the button again. The button will display the currently active color.
+![alt text](src/images/0-Color.png)
 
-### `npm run build`
+### Line Width Slider
+- The line width slider selector will allow users to change the width of the line they wish to draw with.
+![alt text](src/images/0-Slider.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Undo Last
+- The undo last button allows users to undo the last mark made on their canvas.
+![alt text](src/images/0-UndoLast.png) 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# betweenthelines
->>>>>>> 979c5d533cb81dd13913e6e1c56e19d3a257b176
+### Save Image
+- The save button in the very top right of the canvas will save the canvas as a .png image.
+![alt text](src/images/0-Save.png)

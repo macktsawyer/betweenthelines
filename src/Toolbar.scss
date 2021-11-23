@@ -63,3 +63,54 @@
     bottom: 0;
     z-index: 2;
 }
+
+@media screen and (max-width: 350px) {
+    .toolBar {
+        position: relative;
+        left: 10;
+        z-index: 3;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                padding-left: 5px;
+                button {
+                    cursor: pointer;
+                    z-index: 3;
+                }
+            }
+            div {
+                position: relative;
+                padding-left: 5px;
+                .colorButton {
+                    height: 28px;
+                    width: 36px;
+                    padding: 0;
+                    border-radius: 4px;
+                    border: 1px solid black;
+                    .colorBox {
+                        width: 60%;
+                        height: 60%;
+                        padding: 2px;
+                        border-radius: 4px;
+                        border: 1px solid black;
+                    }
+                }
+                .menu {
+                    position: absolute;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .menu.active {
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    opacity: 1;
+                    visibility: visible;
+                    top: 32px;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+}

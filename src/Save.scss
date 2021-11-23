@@ -7,3 +7,15 @@
         color: white;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .saveIcon {
+        position: fixed;
+        right: 5px;
+        top: 10px;
+        z-index: 4;
+        .savePic {
+            color: white;
+        }
+    }
+}

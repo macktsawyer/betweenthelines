@@ -9,8 +9,8 @@ const Canvas = () => {
     const [isDrawing, setIsDrawing ] = useState(false);
     const [currentColor, setCurrentColor] = useState('#000000');
     const [currentTool, setCurrentTool] = useState('Line');
-    const [currentState, setCurrentState] = useState([]);
-    const [steps, setSteps] = useState(0);
+    const [currentState, setCurrentState] = useState();
+    const [previousState, setPreviousState] = useState();
     const [lineSize, setLineSize] = useState(6);
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
@@ -18,14 +18,14 @@ const Canvas = () => {
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        canvas.width = window.innerWidth * 2; // Establish canvas size
-        canvas.height = window.innerHeight * 2;
+        canvas.width = window.innerWidth; // Establish canvas size
+        canvas.height = window.innerHeight;
         canvas.style.width = `${window.innerWidth - 10}px`; // Canvas size styles (matching canvas sizes to inner.width -10px)
         canvas.style.height = `${window.innerHeight - 10}px`;
         canvas.style.border = '1px solid black'; // Create a border around canvas (at least for debugging purposes)
 
         const context = canvas.getContext('2d');
-        context.scale(2, 2); // Create an x, y scale 
+        context.scale(1, 1); // Create an x, y scale 
         context.lineCap = "round"; // Our lines will have rounded endings
                                  
         context.lineWidth = 6; // Change these later with a drop-down menu?
@@ -34,6 +34,7 @@ const Canvas = () => {
     },[])
 
     const startDrawing = ({nativeEvent}) => {
+        savePrevious();
         if (currentTool === 'Line') {
             const {offsetX, offsetY} = nativeEvent;
             contextRef.current.strokeStyle = `${currentColor}` // Set stroke style with current color
@@ -82,8 +83,6 @@ const Canvas = () => {
         context.lineCap = "round";
         context.strokeStyle = `${currentColor}`;
         setCurrentTool('Line');
-        setSteps(0);
-        // Clear the undo, redo states
     }
 
     const newColor = (e) => {
@@ -100,8 +99,12 @@ const Canvas = () => {
 
     const pushMove = () => {
         const canvas = canvasRef.current;
-        setSteps(steps + 1);
-        setCurrentState([...currentState, canvas.toDataURL()]);
+        setCurrentState(canvas.toDataURL());
+    }
+
+    const savePrevious = () => {
+        const canvas = canvasRef.current;
+        setPreviousState(canvas.toDataURL());
     }
 
     const undoMove = () => {
@@ -109,26 +112,9 @@ const Canvas = () => {
         const context = canvas.getContext('2d');
         canvas.width = window.innerWidth;  // Dimensions needed in order to ensure same size when image remounted
         canvas.height = window.innerHeight;
-        if (steps > 0) {
-            setSteps(steps - 1);
-            let canvasPic = new Image();
-            canvasPic.src = currentState[steps - 1];
-            canvasPic.onload = function () {context.drawImage(canvasPic, 0, 0, canvas.width, canvas.height) }
-        }
-        // Pop off last from array
-    }
-
-    const redoMove = () => {
-        const canvas = canvasRef.current;
-        const context = canvas.getContext('2d');
-        canvas.width = window.innerWidth; // Dimensions needed in order to ensure same size when image remounted
-        canvas.height = window.innerHeight;
-        if (steps < currentState.length-1) {
-            setSteps(steps + 1);
-            let canvasPic = new Image();
-            canvasPic.src = currentState[steps];
-            canvasPic.onload = function () { context.drawImage(canvasPic, 0, 0, canvas.width, canvas.height)}
-        }
+        let canvasPic = new Image();
+        canvasPic.src = previousState;
+        canvasPic.onload = function () {context.drawImage(canvasPic, 0, 0, canvas.width, canvas.height) }
     }
 
     const handleSave = () => {
@@ -143,8 +129,7 @@ const Canvas = () => {
         newColorClick={newColor}
         newToolClick={defineTool} // Callback functions being passed to toolbar
         newThickness={handleSlider}
-        undoDraw={undoMove}
-        redoDraw={redoMove} />
+        undoDraw={undoMove} />
         <Save 
         newSave={handleSave} />
         <canvas 
