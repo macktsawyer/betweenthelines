@@ -69,7 +69,7 @@ const LandingPageEnd = () => {
                 href="https://www.linkedin.com/in/mack-sawyer-a1722b92/"
                 class="fa fa-linkedin"
               ></a>
-              <a href="" class="fa fa-twitter"></a>
+              <a href="https://twitter.com/VulpesCodes" class="fa fa-twitter"></a>
               <a href="https://github.com/macktsawyer" class="fa fa-github"></a>
             </figcaption>
           </div>
