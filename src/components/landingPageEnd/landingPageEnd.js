@@ -57,8 +57,7 @@ const LandingPageEnd = () => {
             <figcaption>
               <h4>
                 {" "}
-                <span >Web</span>{" "}
-                <span >Developer</span>
+                <span>Web</span> <span>Developer</span>
               </h4>
               <p>
                 Adipiscing elit. Suspendisse tincidunt magna sit amet sem
@@ -66,9 +65,12 @@ const LandingPageEnd = () => {
                 id dictum orci. In aliquet tempor velit in tempor. Nunc mattis
                 lobortis mi magna sit amet.
               </p>
-              <a href="" class="fa fa-linkedin"></a>
+              <a
+                href="https://www.linkedin.com/in/mack-sawyer-a1722b92/"
+                class="fa fa-linkedin"
+              ></a>
               <a href="" class="fa fa-twitter"></a>
-              <a href="" class="fa fa-github"></a>
+              <a href="https://github.com/macktsawyer" class="fa fa-github"></a>
             </figcaption>
           </div>
         </div>
@@ -84,18 +86,22 @@ const LandingPageEnd = () => {
           <div class="text">
             <figcaption>
               <h4>
-                <span >Web</span>{" "}
-                <span >Developer</span>
+                <span>Web</span> <span>Developer</span>
               </h4>
               <p>
-                Adipiscing elit. Suspendisse tincidunt magna sit amet sem
-                laoreet, a condimentum purus elementum. Duis ac finibus lorem,
-                id dictum orci. In aliquet tempor velit in tempor. Nunc mattis
-                lobortis mi magna sit amet.
+                Hey! After a career change, I've spent the last 6 or so months learning different
+                technologies such as Javascript, css and Java to better
+                understand the world of software engineering.
               </p>
-              <a href="" class="fa fa-linkedin"></a>
+              <a
+                href="www.linkedin.com/in/richard-dgonzalez"
+                class="fa fa-linkedin"
+              ></a>
               <a href="" class="fa fa-twitter"></a>
-              <a href="" class="fa fa-github"></a>
+              <a
+                href="https://github.com/RichardGAnthology"
+                class="fa fa-github"
+              ></a>
             </figcaption>
           </div>
         </div>
