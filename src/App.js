@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Direct />
         <Routes>
-          <Route path ="/" exact element={<LandingPage/>} />
+          <Route exact path ="/" element={<LandingPage/>} />
           <Route path="/landingPage" element={<LandingPage />} />
           <Route path="/drawingApp" element={<Canvas />} />
 
