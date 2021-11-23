@@ -11,14 +11,14 @@ function App() {
     
       <Router>
         <Direct />
-        <Routes>
-          <Route exact path ="/" component={<LandingPage/>} />
-          <Route path="/landingPage" component={<LandingPage />} />
-          <Route path="/drawingApp" element={<Canvas />} />
+          <Routes>
+            <Route path ="/" element={<LandingPage/>} />
+            <Route path="/landingPage" element={<LandingPage />} />
+            <Route path="/drawingApp" element={<Canvas />} />
 
-          {/* <LandingPage />
-          <Canvas /> */}
-        </Routes>
+            {/* <LandingPage />
+            <Canvas /> */}
+          </Routes>
       </Router>
     </div>
   );
