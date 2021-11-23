@@ -12,9 +12,9 @@ function App() {
       <Router>
         <Direct />
           <Routes>
-            <Route path ="/" element={<LandingPage/>} />
-            <Route path="/landingPage" element={<LandingPage />} />
-            <Route path="/drawingApp" element={<Canvas />} />
+            <Route path ="/betweenthelines/" element={<LandingPage/>} />
+            <Route path="/betweenthelines/landingPage" element={<LandingPage />} />
+            <Route path="/betweenthelines/drawingApp" element={<Canvas />} />
 
             {/* <LandingPage />
             <Canvas /> */}
