@@ -13,8 +13,8 @@ function App() {
         <Direct />
           <Routes>
             <Route path ="/betweenthelines/" element={<LandingPage/>} />
-            <Route path="/landingPage" element={<LandingPage />} />
-            <Route path="/drawingApp" element={<Canvas />} />
+            <Route path="/betweenthelines/landingPage" element={<LandingPage />} />
+            <Route path="/betweenthelines/drawingApp" element={<Canvas />} />
 
             {/* <LandingPage />
             <Canvas /> */}
