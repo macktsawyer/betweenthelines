@@ -1,6 +1,6 @@
 {
   "homepage": "https://macktsawyer.github.io/betweenthelines/",
-  "proxy": "http://localhost:3000/betweenthelines/",
+  "proxy": "http://localhost:3000/",
   "name": "what-is-art",
   "version": "0.1.0",
   "private": false,
