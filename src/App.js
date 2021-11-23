@@ -15,7 +15,7 @@ function App() {
             <Route path ="/betweenthelines/" element={<LandingPage/>} />
             <Route path="/betweenthelines/landingPage" element={<LandingPage />} />
             <Route path="/betweenthelines/drawingApp" element={<Canvas />} />
-
+            <Route path="/betweenthelines/*" element={<LandingPage />} />
             {/* <LandingPage />
             <Canvas /> */}
           </Routes>
