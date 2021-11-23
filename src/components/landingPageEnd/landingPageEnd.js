@@ -60,10 +60,10 @@ const LandingPageEnd = () => {
                 <span>Web</span> <span>Developer</span>
               </h4>
               <p>
-                Adipiscing elit. Suspendisse tincidunt magna sit amet sem
-                laoreet, a condimentum purus elementum. Duis ac finibus lorem,
-                id dictum orci. In aliquet tempor velit in tempor. Nunc mattis
-                lobortis mi magna sit amet.
+                After a rewarding career in aviation based medicine, I have started my journey towards a career in tech. 
+                I have a passion for web development and particularly enjoy working with React and user interfaces. My journey 
+                has taken me through the MERN stack as well as using SASS, Firebase / Firestore and numerous amazing libraries and
+                technologies.
               </p>
               <a
                 href="https://www.linkedin.com/in/mack-sawyer-a1722b92/"
