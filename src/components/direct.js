@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import PencilNoLegs from "../assests/PencilNoLegs.svg";
+import ClickMeToDraw from "../assests/ClickMeToDraw.png"
 
 export default function Direct() {
   return (
     <div>
-        <div className="speech-bubble">Click me to draw!</div>
+        <img className="speech-bubble" src={ClickMeToDraw}></img>
       <Link to="/drawingApp">
         {" "}
         <img id="pencil-sticky" src={PencilNoLegs} alt="pencil"></img>

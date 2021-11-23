@@ -18,45 +18,14 @@
 
 .speech-bubble {
   position: fixed;
-  top: 75vh;
-  right: 0vw;
-  height: 40px;
-  width: 130px;
+  top: 79vh;
+  right: 1vw;
   z-index: 3;
-  background: linear-gradient(89deg, #e51616, #d0ed1e, #1e42ed, #0bb634);
-  background-size: 800% 800%;
-
-  -webkit-animation: AnimationName 19s ease infinite;
-  -o-animation: AnimationName 19s ease infinite;
-  animation: AnimationName 19s ease infinite;
-  border-radius: 0.4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.speech-bubble:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 22px solid transparent;
-  border-top-color: #2cd0e6;
-  border-bottom: 0;
-  margin-left: -22px;
-  margin-bottom: -22px;
-}
 
-.css-selector {
-  background: linear-gradient(89deg, #e51616, #d0ed1e, #1e42ed, #0bb634);
-  background-size: 800% 800%;
 
-  -webkit-animation: AnimationName 19s ease infinite;
-  -o-animation: AnimationName 19s ease infinite;
-  animation: AnimationName 19s ease infinite;
-}
+
 
 @-webkit-keyframes AnimationName {
   0% {
