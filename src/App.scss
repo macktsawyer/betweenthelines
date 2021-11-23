@@ -1,4 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+
 .App {
   text-align: center;
 }
 
+#pencil-sticky {
+  height: 150px;
+  position: fixed;
+  top: 80vh;
+  right: 1vw;
+  z-index: 3;
+}
+
+#pencil-sticky:hover {
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: fixed;
+  top: 75vh;
+  right: 0vw;
+  height: 40px;
+  width: 130px;
+  z-index: 3;
+  background: linear-gradient(89deg, #e51616, #d0ed1e, #1e42ed, #0bb634);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 19s ease infinite;
+  -o-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 22px solid transparent;
+  border-top-color: #2cd0e6;
+  border-bottom: 0;
+  margin-left: -22px;
+  margin-bottom: -22px;
+}
+
+.css-selector {
+  background: linear-gradient(89deg, #e51616, #d0ed1e, #1e42ed, #0bb634);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 19s ease infinite;
+  -o-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+/* ------------------- */
+/*   Utility Classes   */
+/* ------------------- */
+
+.square-grid {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAHlBMVEUAAABkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGSH0mEbAAAACnRSTlMAzDPDPPPYnGMw2CgMzQAAAChJREFUKM9jgAPOAgZMwGIwKkhXQSUY0BCCMxkEYUAsEM4cjI4fwYIAf2QMNbUsZjcAAAAASUVORK5CYII=");
+  /* background-size: 30px; */
+  // width: 100vw;
+  background-repeat: repeat;
+}
+
+/* ---------------------- */
+/*   Custom Properties    */
+/* ---------------------- */
+
+:root {
+  /* font-families */
+  --ff-love: "Love Ya Like A Sister", cursive;
+}
