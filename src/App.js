@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Direct />
         <Routes>
-          <Route exact path ="/" element={<LandingPage/>} />
-          <Route path="/landingPage" element={<LandingPage />} />
+          <Route exact path ="/" component={<LandingPage/>} />
+          <Route path="/landingPage" component={<LandingPage />} />
           <Route path="/drawingApp" element={<Canvas />} />
 
           {/* <LandingPage />
