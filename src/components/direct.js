@@ -7,7 +7,7 @@ export default function Direct() {
   return (
     <div>
         <img className="speech-bubble" src={ClickMeToDraw}></img>
-      <Link to="/betweenthelines/drawingApp">
+      <Link to="/drawingApp">
         {" "}
         <img id="pencil-sticky" src={PencilNoLegs} alt="pencil"></img>
       </Link>
