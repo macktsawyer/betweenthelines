@@ -1,4 +1,5 @@
 # Draw Between The Lines
+![alt text](src/images/Painting7.png)
 
 ## What Is It
 -Draw Between The Lines is a front-end React based drawing application utilizing HTML5's Canvas. Built initially for the Mintbean hackathon, this project will continue on and grow with features and improvements.
@@ -38,3 +39,5 @@
 ### Save Image
 - The save button in the very top right of the canvas will save the canvas as a .png image.
 ![alt text](src/images/0-Save.png)
+
+![alt text](src/images/Painting5.png)
