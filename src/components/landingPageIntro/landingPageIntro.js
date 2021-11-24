@@ -82,6 +82,7 @@ function LandingPageIntro() {
       {/* <section className="animated-pencil-icon">
         <img id="pencil-bag" src={PencilLeg}></img>
       </section> */}
+      {/* test */}
     </section>
   );
 }
