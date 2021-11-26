@@ -60,16 +60,21 @@ const LandingPageEnd = () => {
                 <span>Web</span> <span>Developer</span>
               </h4>
               <p>
-                After a rewarding career in aviation based medicine, I have started my journey towards a career in tech. 
-                I have a passion for web development and particularly enjoy working with React and user interfaces. My journey 
-                has taken me through the MERN stack as well as using SASS, Firebase / Firestore and numerous amazing libraries and
-                technologies.
+                After a rewarding career in aviation based medicine, I have
+                started my journey towards a career in tech. I have a passion
+                for web development and particularly enjoy working with React
+                and user interfaces. My journey has taken me through the MERN
+                stack as well as using SASS, Firebase / Firestore and numerous
+                amazing libraries and technologies.
               </p>
               <a
                 href="https://www.linkedin.com/in/mack-sawyer-a1722b92/"
                 class="fa fa-linkedin"
               ></a>
-              <a href="https://twitter.com/VulpesCodes" class="fa fa-twitter"></a>
+              <a
+                href="https://twitter.com/VulpesCodes"
+                class="fa fa-twitter"
+              ></a>
               <a href="https://github.com/macktsawyer" class="fa fa-github"></a>
             </figcaption>
           </div>
@@ -89,15 +94,19 @@ const LandingPageEnd = () => {
                 <span>Web</span> <span>Developer</span>
               </h4>
               <p>
-                Hey! After a career change, I've spent the last 6 or so months learning different
-                technologies such as Javascript, css and Java to better
-                understand the world of software engineering.
+                After a change in focus from Law into Software Engineering, I've
+                focused my time on learning different web focused technologies 
+                that range from Javascript, and CCS3, to Java, and Firebase. I am
+                eager to learn more to see how far I can go!
               </p>
               <a
-                href="www.linkedin.com/in/richard-dgonzalez"
+                href="https://www.linkedin.com/in/richard-dgonzalez/"
                 class="fa fa-linkedin"
               ></a>
-              <a href="" class="fa fa-twitter"></a>
+              <a
+                href="https://twitter.com/RichardDDev"
+                class="fa fa-twitter"
+              ></a>
               <a
                 href="https://github.com/RichardGAnthology"
                 class="fa fa-github"

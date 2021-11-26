@@ -39,7 +39,7 @@ function LandingPageIntro() {
           <span style={{ color: "purple" }}> Lines!" </span>
         </p>{" "}
 
-        <div>
+        <div className="intro-body-wrapper">
           <p className="intro-description-body">
             This is a program designed to remove any borders from your
             imagination.
@@ -54,7 +54,7 @@ function LandingPageIntro() {
             rabbits? Go for that too!
           </p>
           <p
-            className="intro-description-body second"
+            className="intro-description-body second last"
             style={{ fontSize: "10px" }}
           >
             ...whatever you do just don't draw any birds like that m figure that
