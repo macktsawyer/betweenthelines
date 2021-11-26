@@ -77,6 +77,56 @@ const Canvas = () => {
     }
   };
 
+  const getTouchPos = (leCanvas, touchEvent) => {
+    let rect = leCanvas.getBoundingClientRect();  
+    return {
+        x: touchEvent.touches[0].clientX - rect.left,  // Get coordinates for a touch event
+        y: touchEvent.touches[0].clientY - rect.top
+    }
+  }
+
+  const startTouch = (e) => {
+    const canvas = canvasRef.current;
+    let brushPos = getTouchPos(canvas, e);
+    if (currentTool === "Line") {
+        contextRef.current.strokeStyle = `${currentColor}`; // Set stroke style with current color
+        contextRef.current.lineWidth = `${lineSize}`; // Set line width by current state of lineSize
+        contextRef.current.beginPath();
+        contextRef.current.moveTo(brushPos.x, brushPos.y);
+        setIsDrawing(true);
+    } else if (currentTool === "Fill") {
+        contextRef.current.fillStyle = `${currentColor}`; // Set fill style with current color
+        contextRef.current.fill();
+        contextRef.current.moveTo(brushPos.x, brushPos.y);
+        setIsDrawing(true);
+    }
+  }
+
+  const moveTouch = (e) => {
+    const canvas = canvasRef.current;
+    let brushPos = getTouchPos(canvas, e);
+    if (!isDrawing) {
+        // If not drawing, return
+        return;
+      }
+    if (currentTool === "Line") {
+        contextRef.current.lineTo(brushPos.x, brushPos.y); // Draw line to next coord to continue
+        contextRef.current.stroke();
+    }
+  }
+
+  const endTouch = () => {
+    if (currentTool === "Line") {
+        contextRef.current.closePath(); // Ending touch event will lead to the line path finishing
+        setIsDrawing(false);
+        pushMove();
+    } else if (currentTool === "Fill") {
+        contextRef.current.closePath();
+        setIsDrawing(false);
+        pushMove();
+    }
+  }
+
   const clearDrawing = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -143,6 +193,9 @@ const Canvas = () => {
         onMouseDown={startDrawing}
         onMouseUp={finishedDrawing} // Event handlers for canvas
         onMouseMove={drawing}
+        onTouchStart={startTouch}
+        onTouchMove={moveTouch}
+        onTouchEnd={endTouch}
         ref={canvasRef}
         className="drawingTable"
       />

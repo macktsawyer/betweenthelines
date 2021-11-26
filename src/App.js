@@ -2,7 +2,7 @@ import "./App.scss";
 import Canvas from "./Canvas";
 // import PencilNoLegs from "./assests/PencilNoLegs.svg";
 import LandingPage from "./components/landingPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // import Direct from "./components/direct";
 
 function App() {
