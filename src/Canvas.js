@@ -12,7 +12,7 @@ const Canvas = () => {
   const [isDrawing, setIsDrawing] = useState(false);
   const [currentColor, setCurrentColor] = useState("#000000");
   const [currentTool, setCurrentTool] = useState("Line");
-  const [currentState, setCurrentState] = useState();
+  const [currentState, setCurrentState] = useState(); // For future use in full undo / redo
   const [previousState, setPreviousState] = useState();
   const [lineSize, setLineSize] = useState(6);
   const canvasRef = useRef(null);
@@ -25,15 +25,14 @@ const Canvas = () => {
     canvas.style.width = `${window.innerWidth - 10}px`; // Canvas size styles (matching canvas sizes to inner.width -10px)
     canvas.style.height = `${window.innerHeight - 10}px`;
     canvas.style.border = "1px solid black"; // Create a border around canvas (at least for debugging purposes)
-
     const context = canvas.getContext("2d");
     context.scale(1, 1); // Create an x, y scale
     context.lineCap = "round"; // Our lines will have rounded endings
-
-    context.lineWidth = 6; // Change these later with a drop-down menu?
-
+    context.lineWidth = 6; // Establishing default line width
     contextRef.current = context;
   }, []);
+
+  // ----- Mouse Events -----
 
   const startDrawing = ({ nativeEvent }) => {
     savePrevious();
@@ -85,6 +84,8 @@ const Canvas = () => {
     }
   }
 
+  // ----- Touch Events -----
+
   const startTouch = (e) => {
     const canvas = canvasRef.current;
     let brushPos = getTouchPos(canvas, e);
@@ -127,6 +128,8 @@ const Canvas = () => {
     }
   }
 
+  // ----- Toolbar Callbacks -----
+
   const clearDrawing = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -150,6 +153,15 @@ const Canvas = () => {
     setLineSize(e.target.value); // Callback function for toolbar to get and set Line Size
   };
 
+  const handleSave = () => {
+    const canvas = canvasRef.current;
+    canvas.toBlob(function (blob) {
+      saveAs(blob, "mypainting.png"); // Saves a blob
+    });
+  };
+
+  // ----- Preserve Image / Recall Image -----
+
   const pushMove = () => {
     const canvas = canvasRef.current;
     setCurrentState(canvas.toDataURL());
@@ -170,13 +182,6 @@ const Canvas = () => {
     canvasPic.onload = function () {
       context.drawImage(canvasPic, 0, 0, canvas.width, canvas.height);
     };
-  };
-
-  const handleSave = () => {
-    const canvas = canvasRef.current;
-    canvas.toBlob(function (blob) {
-      saveAs(blob, "mypainting.png"); // Saves a blob
-    });
   };
 
   return (

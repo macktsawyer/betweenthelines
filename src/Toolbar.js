@@ -18,7 +18,7 @@ const Toolbar = ({ clearClick, newColorClick, newToolClick, newThickness, undoDr
     }
 
     function offClick() {
-        setIsColorActive(false);
+        setIsColorActive(false);  // Offclick to disable color menu
     }
 
     return (
