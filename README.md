@@ -40,4 +40,7 @@
 - The save button in the very top right of the canvas will save the canvas as a .png image.
 ![alt text](src/images/0-Save.png)
 
+## Mobile Responsiveness
+- If using on a mobile device the canvas will be sized accordingly. If using a browser and the window size is adjusted, the canvas will remain the previous size until page is refreshed. This was done on purpose to preserve anything that had been already drawn. If you wish to have the canvas fit the new window size, refresh, but you will lose anything that had already been drawn.
+
 ![alt text](src/images/Painting5.png)
